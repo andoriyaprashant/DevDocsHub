@@ -1,0 +1,92 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    max-width: 400px; /* Limit width of the login form */
+    margin: 100px auto; /* Center the form vertically and horizontally */
+    padding: 20px;
+    background-color: #fff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h2 {
+    text-align: center; /* Center the heading */
+    color: #333; /* Dark color for the heading */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Spacing between form elements */
+}
+
+label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Make label text bold */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Inner padding for inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners for inputs */
+    box-sizing: border-box; /* Include padding in width */
+    font-size: 16px; /* Font size for inputs */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Inner padding for button */
+    background-color: #007bff; /* Primary color for the button */
+    color: white; /* Text color for the button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.error-messages {
+    background-color: #ffdddd; /* Light red background for error messages */
+    border: 1px solid #f44336; /* Red border */
+    padding: 10px; /* Inner padding */
+    margin-top: 15px; /* Space above the error messages */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.error-messages ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove padding from the list */
+    margin: 0; /* Remove margin from the list */
+    color: #f44336; /* Red color for error text */
+}
+
+p {
+    text-align: center; /* Center align the paragraph */
+    margin-top: 20px; /* Space above the paragraph */
+}
+
+a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

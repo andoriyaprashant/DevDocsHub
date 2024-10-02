@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - DevDocsHub</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'register.css' %}">  <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="background-animation"></div> <!-- Background Animation -->
+    <div class="register-container">
+        <h2>Register for DevDocsHub</h2>
+        
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username:</label>
+                {{ form.username }}
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                <label for="password1">Password:</label>
+                {{ form.password1 }}
+            </div>
+            <div class="form-group">
+                <label for="password2">Confirm Password:</label>
+                {{ form.password2 }}
+            </div>
+            <button type="submit">Register</button>
+        </form>
+
+        {% if form.errors %}
+            <div class="error-messages">
+                <ul>
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <p>Already have an account? <a href="{% url 'accounts:login' %}">Login here</a></p>
+    </div>
+</body>
+</html>

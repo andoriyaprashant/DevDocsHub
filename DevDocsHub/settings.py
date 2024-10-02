@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Docs'
+    #extra added apps
+    'Docs',
+    'accounts', #by Aditya-Mishra9670
 ]
 
 MIDDLEWARE = [
@@ -57,6 +59,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             BASE_DIR / "Docs" / "templates",
+            BASE_DIR / "accounts" / "templates" / "accounts",
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -128,3 +131,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Login funtionalities for accounts app created by Aditya-Mishra9670
+LOGIN_REDIRECT_URL = '/Docs'
+LOGIN_URL = ''
+STATIC_URL = '/static/'
