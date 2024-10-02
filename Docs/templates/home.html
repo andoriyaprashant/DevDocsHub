@@ -167,8 +167,8 @@
 
         .dark-mode-toggle {
             position: fixed;
-            bottom: 20px; /* Distance from the bottom of the viewport */
-            right: 20px;  /* Distance from the right of the viewport */
+            bottom: 20px;
+            right: 20px;
             padding: 10px 20px;
             background-color: #007bff;
             color: #fff;
@@ -176,7 +176,7 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            z-index: 1000; /* Ensure the button is above other content */
+            z-index: 1000;
         }
         
         .dark-mode-toggle:hover {
@@ -209,7 +209,7 @@
             <div class="card">
                 <h2>Programming Languages</h2>
                 <p>Explore comprehensive documentation for a wide range of programming languages such as Python, JavaScript, Java, C++, and more.</p>
-                <a href="#" class="btn">View Languages</a>
+                <a href="{% url 'documentation_list'  %}" class="btn">View Languages</a>
             </div>
             <div class="card">
                 <h2>Open Source Projects</h2>
