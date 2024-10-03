@@ -46,10 +46,8 @@ DevDocsHub is easy to set up and use. Here's a quick guide:
 
 3. **Install Dependencies:**
 
-   Run the following command to install all the required libraries listed in the `requirements.txt` file:
-
    ```bash
-   pip install -r requirements.txt
+   pip install <package_name>
    ```
 
 4. **Apply Database Migrations:**
@@ -124,8 +122,6 @@ Head back to your forked repository on GitHub and navigate to the "Pull requests
 **We appreciate your contributions!**
 
 
-
-I hope this improved documentation serves you well! Let me
   
 
 
