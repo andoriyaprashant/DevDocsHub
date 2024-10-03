@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,67 +13,150 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
             line-height: 1.6;
-            background-color: #f7f8fa;
+            transition: background-color 0.5s, color 0.5s;
         }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #181818;
+            color: #e0e0e0;
+        }
+
+        /* Navbar Styles */
         header {
-            background-color: #007bff;
-            color: #fff;
+            background-color: #0056b3;
+            color: white;
             padding: 15px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.5s;
         }
+
+        body.dark-mode header {
+            background-color: #333;
+        }
+
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-right: 20px;
-            font-weight: 600;
-        }
-        nav a:hover {
-            color: #e2e6ea;
-        }
-        .content {
-            margin: 40px 0;
-        }
-        footer {
-            background-color: #343a40;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-        footer p {
-            font-size: 0.9rem;
-        }
-        .hero {
-            background: url('https://via.placeholder.com/1200x300') no-repeat center center/cover;
-            height: 300px;
             color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            text-decoration: none;
+            margin-right: 25px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            position: relative;
+            transition: color 0.3s ease;
         }
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 600;
+
+        nav a:hover {
+            color: #cce3f2;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+            z-index: 1;
+            border-radius: 5px;
+            min-width: 200px;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #23272b;
+            color: #c2c7cf;
+            padding: 40px 0;
+            text-align: center;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        body.dark-mode footer {
+            background-color: #111;
+            color: #e0e0e0;
+        }
+
+        /* Dark Mode Toggle Button */
+        .dark-mode-toggle {
+            position: flex;
+            top: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #0056b3;
+        }
+
+        body.dark-mode .dark-mode-toggle {
+            background-color: #333;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 1rem;
+                margin-right: 15px;
+            }
+
+            footer .footer-content {
+                flex-direction: column;
+            }
         }
     </style>
     {% block extra_css %}{% endblock %}
 </head>
+
 <body>
-    <!-- Header -->
+    <!-- Header with Animated Navbar -->
     <header>
         <div class="container">
             <nav>
@@ -81,27 +165,64 @@
                 </div>
                 <div>
                     <a href="{% url 'docs_list' %}">Docs</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+                     <!-- Dark Mode Toggle Button -->
+                    <button class="dark-mode-toggle" id="darkModeToggle">Dark Mode</button>
+                    <div class="dropdown">
+                        <a href="#">More</a>
+                        <div class="dropdown-content">
+                            <a href="#">About</a>
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
 
+   
+    
+
     <!-- Main Content Area -->
     <div class="container content">
         {% block content %}
-        <div class="hero">
-            <h1>Welcome to DevDocsHub</h1>
-        </div>
         {% endblock %}
     </div>
 
-    <!-- Footer -->
+    <!-- Enhanced Footer -->
     <footer>
-        <p>&copy; 2024 DevDocsHub. All Rights Reserved.</p>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Support</a>
+            </div>
+            <p>&copy; 2024 DevDocsHub. All Rights Reserved.</p>
+        </div>
     </footer>
+
+    <!-- FontAwesome for social media icons (use CDN) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        // Dark Mode Toggle Functionality
+        const toggleButton = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleButton.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+        });
+    </script>
 
     {% block extra_js %}{% endblock %}
 </body>
+
 </html>
