@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DevDocsHub - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Languages</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Welcome to DevDocsHub</h1>
+        <p>Your one-stop destination for programming and open-source documentation.</p>
+    </header>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search documentation...">
+        </div>
+
+        <section class="grid">
+            <div class="card">
+                <h2>Programming Languages</h2>
+                <p>Explore comprehensive documentation for a wide range of programming languages such as Python, JavaScript, Java, C++, and more.</p>
+                <a href="#" class="btn">View Languages</a>
+            </div>
+            <div class="card">
+                <h2>Open Source Projects</h2>
+                <p>Find documentation for popular open-source projects like Linux, Kubernetes, Docker, and more.</p>
+                <a href="#" class="btn">View Projects</a>
+            </div>
+            <div class="card">
+                <h2>Tutorials & Guides</h2>
+                <p>Access step-by-step tutorials and guides to help you get started with new technologies or enhance your skills.</p>
+                <a href="#" class="btn">Explore Tutorials</a>
+            </div>
+        </section>        
+    </div>
+
+    <footer>
+        <p>&copy; 2024 DevDocsHub. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+
+    <script>
+        // Toggle dark mode function
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
