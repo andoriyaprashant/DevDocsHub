@@ -1,1 +1,24 @@
-__pycache__
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+# Environment variables
+.env
+
+# Database
+db.sqlite3
+db.sqlite3-journal
+
+# Static and media files
+/static/
+/media/
+
+# Virtual environment
+venv/
+env/
+
+# VS Code settings
+.vscode/
