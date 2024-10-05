@@ -186,7 +186,44 @@
         .sun-icon {
             display: none;
         }
-        
+        /* Bright and vibrant color animation for the heading */
+.animated-text {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(270deg, #ff0080, #ff8c00, #00e6ff, #00ff00, #ff00ff, #ffcc00);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorShiftBright 6s ease infinite;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Bright and vibrant color animation for the subtext */
+.animated-subtext {
+  font-size: 1.5rem;
+  font-weight: 300;
+  background: linear-gradient(270deg, #00ff99, #ff3300, #00ffcc, #ff6600, #ff0099, #00ccff);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorShiftBright 6s ease infinite;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@keyframes colorShiftBright {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
     </style>
 
     <!-- Bootstrap links  -->
@@ -205,7 +242,7 @@
     </nav>
 
     <header>
-        <h1>Welcome to DevDocsHub</h1>
+        <h1 class="animated-text">Welcome to DevDocsHub</h1>
         <p>Your one-stop destination for programming and open-source documentation.</p>
     </header>
 
