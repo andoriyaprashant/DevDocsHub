@@ -10,29 +10,38 @@ body {
     color: #333;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 nav {
     background-color: #007bff;
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
 }
+
 nav ul li {
     margin: 0 15px;
 }
+
 nav ul li a {
-    color: #fff;
     text-decoration: none;
     padding: 10px 20px;
     transition: background-color 0.3s ease;
+    font-weight: bold;
+    color: white;
 }
+
 nav ul li a:hover {
-    background-color: #0056b3;
+    background-color: #f9f9f9;
     border-radius: 5px;
+    color:#0056b3;
+    text-decoration: none;
 }
+
 header {
     background-color: #007bff;
     color: #fff;
@@ -40,18 +49,22 @@ header {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
+
 header p {
     font-size: 1.2rem;
 }
+
 .container {
     max-width: 1200px;
     margin: 50px auto;
     padding: 20px;
 }
+
 .card {
     background-color: #fff;
     border-radius: 10px;
@@ -64,23 +77,28 @@ header p {
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .card h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
 }
+
 .card p {
     font-size: 1rem;
     color: #555;
     flex-grow: 1;
 }
+
 .card .btn {
     align-self: flex-start;
     margin-top: 15px;
 }
+
 footer {
     background-color: #343a40;
     color: #fff;
@@ -88,21 +106,26 @@ footer {
     text-align: center;
     margin-top: 50px;
 }
+
 footer p {
     font-size: 0.9rem;
 }
+
 footer a {
     color: #fff;
 }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
+
 .search-bar {
     margin: 30px 0;
     text-align: center;
 }
+
 .search-bar input[type="text"] {
     width: 50%;
     padding: 10px;
@@ -116,24 +139,31 @@ footer a {
     background-color: #333;
     color: #fff;
 }
+
 .dark-mode header {
     background-color: #222;
 }
+
 .dark-mode nav {
     background-color: #444;
 }
+
 .dark-mode nav ul li a {
     color: #ddd;
 }
+
 .dark-mode .card {
     background-color: #444;
 }
+
 .dark-mode .card p {
     color: #bbb;
 }
+
 .dark-mode footer {
     background-color: #222;
 }
+
 .dark-mode .search-bar input[type="text"] {
     background-color: #555;
     border-color: #777;
@@ -144,13 +174,16 @@ footer a {
     header h1 {
         font-size: 2rem;
     }
+
     .card h2 {
         font-size: 1.5rem;
     }
+
     .btn {
         width: 100%;
         text-align: center;
     }
+
     .search-bar input[type="text"] {
         width: 80%;
     }
@@ -158,8 +191,10 @@ footer a {
 
 .dark-mode-toggle {
     position: fixed;
-    bottom: 20px; /* Distance from the bottom of the viewport */
-    right: 20px;  /* Distance from the right of the viewport */
+    bottom: 20px;
+    /* Distance from the bottom of the viewport */
+    right: 20px;
+    /* Distance from the right of the viewport */
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -167,7 +202,8 @@ footer a {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    z-index: 1000; /* Ensure the button is above other content */
+    z-index: 1000;
+    /* Ensure the button is above other content */
 }
 
 .dark-mode-toggle:hover {
