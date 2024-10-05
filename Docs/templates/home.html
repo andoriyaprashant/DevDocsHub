@@ -86,9 +86,22 @@
             color: #555;
             flex-grow: 1;
         }
-        .card .btn {
-            align-self: flex-start;
-            margin-top: 15px;
+        .apply-btn {
+            display: inline-block;
+            background-color: #ff9800;
+            color: white;
+            padding: 10px 120px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size:  0.7rem;
+        }
+
+        .apply-btn:hover {
+            background-color: #ffb74d;
+            transform: translateY(-3px);
+            box-shadow: crimson 0 0 20px;
         }
         footer {
             background-color: #343a40;
@@ -209,17 +222,17 @@
             <div class="card">
                 <h2>Programming Languages</h2>
                 <p>Explore comprehensive documentation for a wide range of programming languages such as Python, JavaScript, Java, C++, and more.</p>
-                <a href="#" class="btn">View Languages</a>
+                <a href="#" class="apply-btn">View Languages</a>
             </div>
             <div class="card">
                 <h2>Open Source Projects</h2>
                 <p>Find documentation for popular open-source projects like Linux, Kubernetes, Docker, and more.</p>
-                <a href="#" class="btn">View Projects</a>
+                <a href="#" class="apply-btn">View Projects</a>
             </div>
             <div class="card">
                 <h2>Tutorials & Guides</h2>
                 <p>Access step-by-step tutorials and guides to help you get started with new technologies or enhance your skills.</p>
-                <a href="#" class="btn">Explore Tutorials</a>
+                <a href="#" class="apply-btn">Explore Tutorials</a>
             </div>
         </section>        
     </div>
