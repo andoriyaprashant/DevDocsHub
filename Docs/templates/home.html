@@ -170,7 +170,7 @@
             bottom: 20px; /* Distance from the bottom of the viewport */
             right: 20px;  /* Distance from the right of the viewport */
             padding: 10px 20px;
-            background-color:gray;
+            background-color:rgb(255, 140, 0);
             color:black;
             border: none;
             border-radius: 100px;
@@ -181,6 +181,10 @@
         
         .dark-mode-toggle:hover {
             background-color: #ffffff;
+        }
+
+        .sun-icon {
+            display: none;
         }
         
     </style>
@@ -234,15 +238,48 @@
         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
 
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
-        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
-      </svg></button>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill moon-icon" viewBox="0 0 16 16">
+            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.03 3.343 7.31 7.475 7.31a7.1 7.1 0 0 0 3.351-.8.773.773 0 0 1 .859.084.747.747 0 0 1 .184.843A8.003 8.003 0 0 1 8.002 16C3.805 16 0 12.31 0 7.63 0 4.034 2.322.94 5.495.094a.746.746 0 0 1 .838.184z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill sun-icon" viewBox="0 0 16 16">
+            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 1.5a.5.5 0 0 1 .5.5v1.376a.5.5 0 0 1-1 0V2a.5.5 0 0 1 .5-.5zm4.146.354a.5.5 0 0 1 .708 0l.975.975a.5.5 0 0 1-.707.708l-.976-.975a.5.5 0 0 1 0-.708zM14 7.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zM12.354 12.146a.5.5 0 0 1 .708 0l.975.976a.5.5 0 0 1-.707.707l-.976-.975a.5.5 0 0 1 0-.708zM8 14.124a.5.5 0 0 1 .5.5v.876a.5.5 0 0 1-1 0v-.876a.5.5 0 0 1 .5-.5zM2.854 12.146a.5.5 0 1 1-.707.708l-.975-.976a.5.5 0 0 1 .707-.707l.975.975zM1.5 8a.5.5 0 0 1 .5-.5h1.376a.5.5 0 0 1 0 1H2a.5.5 0 0 1-.5-.5zm.854-5.146a.5.5 0 0 1 0 .708l-.975.976a.5.5 0 1 1-.707-.708l.975-.975a.5.5 0 0 1 .707 0zm2.25-.728a.5.5 0 0 1 .707 0l.976.975a.5.5 0 0 1-.708.708l-.975-.976a.5.5 0 0 1 0-.707z"/>
+        </svg>
+    </button>
 
     <script>
-        // Toggle dark mode function
         function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
+            const body = document.body;
+            const isDarkMode = body.classList.toggle('dark-mode');
+            
+            // Switch icons
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+            
+            if (isDarkMode) {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+            }
         }
+
+        // Initial check to apply correct icon on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const isDarkMode = body.classList.contains('dark-mode');
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+            
+            if (isDarkMode) {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
