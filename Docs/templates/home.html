@@ -15,14 +15,16 @@
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            background-color: #f9f9f9;
+            background-color: #afeeee;
             color: #333;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
         nav {
-            background-color: #007bff;
-            padding: 10px;
+            background-color: #fffacd;
+            padding: 5px 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed ;
+            width: 100%;
         }
         nav ul {
             list-style-type: none;
@@ -33,13 +35,13 @@
             margin: 0 15px;
         }
         nav ul li a {
-            color: #fff;
+            color: #191970;
             text-decoration: none;
             padding: 10px 20px;
             transition: background-color 0.3s ease;
         }
         nav ul li a:hover {
-            background-color: #0056b3;
+            background-color: #ffff00;
             border-radius: 5px;
         }
         header {
@@ -52,9 +54,11 @@
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
+            color: #191970;
         }
         header p {
             font-size: 1.2rem;
+            color: #191970;
         }
         .container {
             max-width: 1200px;
@@ -62,7 +66,7 @@
             padding: 20px;
         }
         .card {
-            background-color: #fff;
+            background-color: #fffacd;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -76,6 +80,10 @@
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .highlight {
+            background-color: #0000ff;
+            transition: background-color 1s ease;
         }
         .card h2 {
             font-size: 1.8rem;
@@ -118,6 +126,7 @@
             font-size: 1rem;
             border-radius: 5px;
             border: 1px solid #ccc;
+
         }
 
         /* Dark Mode Styles */
@@ -132,6 +141,12 @@
             background-color: #444;
         }
         .dark-mode nav ul li a {
+            color: #ddd;
+        }
+        .dark-mode header h1 {
+            color: #ddd;
+        }
+        .dark-mode header p{
             color: #ddd;
         }
         .dark-mode .card {
@@ -167,8 +182,8 @@
 
         .dark-mode-toggle {
             position: fixed;
-            bottom: 20px; /* Distance from the bottom of the viewport */
-            right: 20px;  /* Distance from the right of the viewport */
+            bottom: 20px; 
+            right: 20px;  
             padding: 10px 20px;
             background-color: #007bff;
             color: #fff;
@@ -176,7 +191,7 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            z-index: 1000; /* Ensure the button is above other content */
+            z-index: 1000; 
         }
         
         .dark-mode-toggle:hover {
@@ -189,7 +204,7 @@
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Languages</a></li>
+            <li><a href="#" id="languagesLink">Languages</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -205,7 +220,7 @@
             <input type="text" placeholder="Search documentation...">
         </div>
 
-        <section class="grid">
+        <section class="grid" id="languagesSection">
             <div class="card">
                 <h2>Programming Languages</h2>
                 <p>Explore comprehensive documentation for a wide range of programming languages such as Python, JavaScript, Java, C++, and more.</p>
@@ -232,10 +247,26 @@
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
 
     <script>
-        // Toggle dark mode function
+       
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
         }
+
+        
+        document.getElementById('languagesLink').addEventListener('click', function (event) {
+            event.preventDefault(); 
+
+            
+            document.getElementById('languagesSection').scrollIntoView({ behavior: 'smooth' });
+
+          
+            const section = document.getElementById('languagesSection');
+            section.classList.add('highlight');
+
+            setTimeout(() => {
+                section.classList.remove('highlight');
+            }, 2000);
+        });
     </script>
 </body>
 </html>
