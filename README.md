@@ -1,4 +1,4 @@
-**DevDocsHub: Your One-Stop Shop for Programming Documentation**
+ **DevDocsHub: Your One-Stop Shop for Programming Documentation**
 
 DevDocsHub is a powerful Django-based web application designed to empower developers and learners. It aims to be the ultimate resource for programming knowledge and open-source exploration, offering a user-friendly interface and a wealth of essential materials.
 
