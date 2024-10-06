@@ -220,7 +220,6 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
             z-index: 1000;
-            /* Ensure the button is above other content */
         }
 
         .dark-mode-toggle:hover {
@@ -272,7 +271,7 @@
                                 Programming Languages</h5>
                             <p class="card-text">Explore comprehensive documentation for a wide range of programming
                                 languages such as Python,Javascript,Java,C++, and more.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
+                            <a href="{% url 'documentation_list'  %}" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -304,8 +303,7 @@
                         </div>
                     </div>
                 </div>
-
-
+        </section>        
             </div>
         </section>
     </div>
@@ -316,6 +314,7 @@
         <i class="fa-brands fa-linkedin" style="color: #005bbd;"></i>
         <i class="fa-brands fa-youtube" style="color: red;"></i>
     </div>
+
     </div>
     <footer>
         <p>&copy; 2024 DevDocsHub. All rights reserved.</p>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f8ff;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+
+        h1 {
+            color: #1e90ff;
+            text-align: center;
+        }
+
+        label {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #1e90ff;
+            border-radius: 8px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+
+        input:focus, textarea:focus {
+            border-color: #4682b4;
+            box-shadow: 0 0 5px rgba(70, 130, 180, 0.5);
+        }
+
+        button {
+            width: 100%;
+            background-color: #1e90ff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4682b4;
+        }
+
+        .message {
+            text-align: center;
+            color: #1e90ff;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Add Languages</h1>
+        <p class="message">Add programming languages</p>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div>
+                <label for="name">Language name:</label>
+                <input type="text" id="name" name="name" class="name" placeholder="Enter Language name" required>
+            </div>
+            <div>
+                <label for="url">Official Website URL:</label>
+                <input type="url" id="url" name="url" placeholder="Enter Official Website URL" required>
+            </div>
+            <div>
+                <label for="content">Description</label>
+                <textarea id="content" name="content" placeholder="Enter Description" rows="4" required></textarea>
+            </div>
+            <div>
+                <button type="submit">Add language</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
