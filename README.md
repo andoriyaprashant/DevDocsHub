@@ -11,7 +11,7 @@ DevDocsHub is a powerful Django-based web application designed to empower develo
 **Getting Started**
 
 DevDocsHub is easy to set up and use. Here's a quick guide:
-  
+
 **Prerequisites:**
 
 * Python 3.x installed on your system
