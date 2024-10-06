@@ -110,7 +110,7 @@ We welcome contributions from the community! Here's how to get involved:
 6. **Push Your Changes:**
 
    Push your changes to your forked repository on GitHub:
-
+  
    ```bash
    git push origin your-feature-name
    ```
