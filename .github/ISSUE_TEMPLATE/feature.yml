@@ -6,7 +6,7 @@ body:
   - type: textarea
     attributes:
       label: "Describe the feature"
-      description:
+      description: "Please describe the feature you would like to see"
     validations:
       required: true
   - type: textarea
@@ -21,4 +21,5 @@ body:
       options:
         - label: "I agree to follow this project's Code of Conduct"
           required: true
+        - label: "I'm a GSSOC'24 contributor"
         - label: "I want to work on this issue"
