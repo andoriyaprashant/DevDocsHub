@@ -88,16 +88,137 @@
         .card a:hover {
             color: #0056b3;
         }
-        footer {
-            background-color: #343a40;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            margin-top: 50px;
+        /* Footer */
+        .footer {
+             background-color: #1a1a1a;
+             color: white;
+              padding: 40px 0;
+           }
+
+         .container {
+             max-width: 1200px;
+             margin: 0 auto;
+             padding: 0 20px;
+            }
+
+         .footer-row {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+           gap: 40px;
+           margin-bottom: 40px;
+           }         
+        
+        .footer-column {
+          display: flex;
+          flex-direction: column;
         }
-        footer p {
-            font-size: 0.9rem;
+        
+        .footer-title {
+          font-size: 24px;
+          color: #3b82f6;
+          margin-bottom: 10px;
         }
+        
+        .footer-subtitle {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+        
+        .footer-text {
+          font-size: 14px;
+          margin-bottom: 20px;
+          color: #bdbdbd;
+        }
+        
+        .social-links {
+          display: flex;
+          gap: 10px;
+        }
+        
+        .social-icon img {
+          width: 24px;
+          height: 24px;
+        }
+        
+        .footer-list {
+          list-style: none;
+          padding: 0;
+        }
+        
+        .footer-link {
+          color: #bdbdbd;
+          text-decoration: none;
+        }
+        
+        .footer-link:hover {
+          color: white;
+        }
+        
+        .subscribe-form {
+          display: flex;
+          gap: 10px;
+        }
+        
+        .subscribe-input {
+          background-color: #333;
+          color: white;
+          padding: 10px;
+          border: 1px solid #444;
+          flex-grow: 1;
+          border-radius: 5px;
+        }
+        
+        .subscribe-button {
+          background-color: #3b82f6;
+          color: white;
+          padding: 10px 20px;
+          border:none;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+        
+        .subscribe-button:hover {
+          background-color: #2563eb;
+        }
+        
+        .footer-contact {
+          display: flex;
+          justify-content: space-between;
+          padding: 20px 0;
+          border-top: 1px solid #333;
+          border-bottom: 1px solid #333;
+        }
+        
+        .contact-item {
+          display: flex;
+          align-items: center;
+        }
+        
+        .contact-icon {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+        
+        .contact-text, .contact-link {
+          color: #bdbdbd;
+          font-size: 14px;
+        }
+        
+        .contact-link:hover {
+          color: white;
+        }
+        
+        .footer-bottom {
+          display: flex;
+          justify-content: space-between;
+          font-size: 14px;
+          color: #bdbdbd;
+          margin-top: 20px;
+          flex-wrap: wrap;
+          text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -122,8 +243,81 @@
         </section>
     </div>
 
-    <footer>
-        <p>&copy; 2024 DevDocsHub. All rights reserved.</p>
-    </footer>
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="container">
+          <!-- Row 1: Branding and Social Links -->
+          <div class="footer-row">
+            <div class="footer-column branding">
+              <h3 class="footer-title">DevDocsHub</h3>
+              <p class="footer-text">Where Coding Knowledge Meets Open-Source Innovation.</p>
+              <h4 class="footer-subtitle">Stay Connected</h4>
+              <div class="social-links">
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-linkedin" style="color: #005bbd;"></i>
+                <i class="fa-brands fa-youtube" style="color: red;"></i>
+                <i class="fa-brands fa-discord" style="color: #5865F2;"></i>
+                <i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i>
+
+              </div>
+            </div>
+      
+            <!-- Row 2: Explore Links -->
+            <div class="footer-column explore">
+              <h4 class="footer-subtitle">Explore</h4>
+              <ul class="footer-list">
+                <li><a href="#" class="footer-link">Documentation</a></li>
+                <li><a href="#" class="footer-link">Open-Source Projects</a></li>
+                <li><a href="#" class="footer-link">Tutorials</a></li>
+                <li><a href="#" class="footer-link">Blog</a></li>
+              </ul>
+            </div>
+      
+            <!-- Row 3: Community Links -->
+            <div class="footer-column community">
+              <h4 class="footer-subtitle">Community</h4>
+              <ul class="footer-list">
+                <li><a href="#" class="footer-link">GitHub Repository</a></li>
+                <li><a href="#" class="footer-link">Developer Forum</a></li>
+                <li><a href="#" class="footer-link">Contribute</a></li>
+                <li><a href="#" class="footer-link">Events</a></li>
+              </ul>
+            </div>
+      
+            <!-- Row 4: Subscribe Form -->
+            <div class="footer-column subscribe">
+              <h4 class="footer-subtitle">Subscribe</h4>
+              <p class="footer-text">Stay in the loop with the latest programming insights and open-source news.</p>
+              <form class="subscribe-form">
+                <input type="email" placeholder="Enter your email" class="subscribe-input">
+                <button type="submit" class="subscribe-button">Subscribe</button>
+              </form>
+            </div>
+          </div>
+      
+          <!-- Row 5: Contact Information -->
+          <div class="footer-row footer-contact">
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span class="contact-text">Jaipur,Rajasthan</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:info@devdocshub.com" class="contact-link">info@devdocshub.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+1234567890" class="contact-link">+1 (234) 567-890</a>
+            </div>
+          </div>
+      
+          <!-- Row 6: Footer Bottom -->
+          <div class="footer-bottom">
+            <p>&copy; 2024 DevDocsHub. All Rights Reserved.</p>
+            <p>Built with Django and PostgreSQL</p>
+          </div>
+        </div>
+      </footer>
+
 </body>
 </html>
