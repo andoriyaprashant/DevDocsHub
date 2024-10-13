@@ -1,0 +1,83 @@
+[
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "Python",
+        "official_website": "https://www.python.org/",
+        "description": "The official Python website is a hub for everything related to the Python programming language."
+      }
+    },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "JavaScript",
+        "official_website": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        "description": "JavaScript is a versatile language used primarily in web development for creating dynamic user interfaces."
+      }
+    },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "Java",
+        "official_website": "https://www.java.com/",
+        "description": "Java is a high-level programming language widely used for enterprise applications and Android development."
+      }
+    },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "C++",
+        "official_website": "https://isocpp.org/",
+        "description": "C++ is a powerful language known for its performance, widely used in system software and game development."
+      }
+    },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "Ruby",
+        "official_website": "https://www.ruby-lang.org/en/",
+        "description": "Ruby is known for its simplicity and productivity, often used in web development with the Ruby on Rails framework."
+      }
+    },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "PHP",
+        "official_website": "https://www.php.net/",
+        "description": "PHP is a server-side scripting language designed for web development and is widely used for creating dynamic websites."
+      }
+    },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "Go",
+        "official_website": "https://golang.org/",
+        "description": "Go, or Golang, is a statically typed language designed for simplicity and performance, often used in cloud services."
+      }
+    },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "Swift",
+        "official_website": "https://swift.org/",
+        "description": "Swift is Apple's modern programming language for building apps for iOS, macOS, and other Apple platforms."
+      }
+    },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "Kotlin",
+        "official_website": "https://kotlinlang.org/",
+        "description": "Kotlin is a modern language that runs on the Java Virtual Machine, primarily used for Android development."
+      }
+    },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "Rust",
+        "official_website": "https://www.rust-lang.org/",
+        "description": "Rust is known for its focus on safety and performance, often used in system programming and embedded devices."
+      }
+    }
+  ]
+  
