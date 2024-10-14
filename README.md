@@ -68,6 +68,17 @@ DevDocsHub is easy to set up and use. Here's a quick guide:
 
    By default, the server will be running at `http://127.0.0.1:8000/`. You can access DevDocsHub in your web browser at this address.
 
+6. **Data Insertion Guide for ProgrammingLanguage and Documentation Models**
+
+This guide explains how to add data to the `ProgrammingLanguage` and `Documentation` models from JSON files using Django's `loaddata` command.
+
+   #python manage.py loaddata <json_file_name.json>
+   
+   ```bash
+   python manage.py loaddata programminglanguage.json
+   python manage.py loaddata docomentation.json
+   ```
+
 **Contributing to DevDocsHub**
 
 We welcome contributions from the community! Here's how to get involved:

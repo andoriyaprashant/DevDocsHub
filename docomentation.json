@@ -1,0 +1,30 @@
+[
+    {
+      "model": "Docs.documentation",
+      "fields": {
+        "language": 1,
+        "doc_title": "Python Official Documentation",
+        "content": "Comprehensive Python documentation covering standard libraries, language features, and best practices.",
+        "doc_url": "https://docs.python.org/3/"
+      }
+    },
+    {
+      "model": "Docs.documentation",
+      "fields": {
+        "language": 2,
+        "doc_title": "JavaScript Guide",
+        "content": "A guide to JavaScript's key concepts, syntax, and web-based applications.",
+        "doc_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      }
+    },
+    {
+      "model": "Docs.documentation",
+      "fields": {
+        "language": 3,
+        "doc_title": "Java Documentation",
+        "content": "Official Java documentation offering guides on Java platform features and APIs.",
+        "doc_url": "https://docs.oracle.com/javase/tutorial/"
+      }
+    }
+  ]
+  
