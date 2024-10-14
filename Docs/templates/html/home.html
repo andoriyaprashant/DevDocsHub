@@ -258,8 +258,10 @@
     <div class="container">
         <h2 style="font-weight: 700;" class="text-center">You can search about any topic as per your interest <i class="fa-solid fa-thumbs-up" style="color: #0056b3;"></i></h2>
         <div class="search-bar w-75 pb-4">
-            <input type="text" placeholder="Search documentation...">
-            <a href="#" class="btn btn-primary w-25 ">Search</a>
+            <form id="search-form" method="GET" action="/search/">
+                <input type="text" name="name" placeholder="Search programming language..." required>
+                <button type="submit" class="btn btn-primary w-25">Search</button>
+            </form>
         </div>
         <section class="grid">
             <div class="row">
