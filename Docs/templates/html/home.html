@@ -226,24 +226,67 @@
         .dark-mode-toggle:hover {
             background-color: #0056b3;
         }
+        nav {
+    background-color: #007bff;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    display: inline-block;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 50%; /* Adjust this value as per requirement */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    color: #0056b3;
+    text-decoration: none;
+}
+
     </style>
 </head>
 
 <body>
     <nav style="color: white;">
+        <h1>DevDocsHub</h1>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Languages</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><h3><b><a href="#">Home</a></li></b></h3>
+            <li><h3><b><a href="#">Languages</a></li></b></h3>
+            <li><h3><b><a href="#">About</a></li></b></h3>
+            <li><h3><b><a href="#">Contact</a></li></b></h3>
         </ul>
 
     </nav>
 
-    <header>
-        <h1>Welcome to DevDocsHub</h1>
-        <p>Your one-stop destination for programming and open-source documentation.</p>
-    </header>
+   
     <!-- Section 2 -->
     <div class="row mx-auto text-center pt-5">
         <h2 style="font-weight: 700; font-size: 40px; padding: 20px 0px 20px 0px;">Building The <span style="color: #37e30c;"> Future </span> of
