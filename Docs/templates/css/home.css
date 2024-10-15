@@ -50,6 +50,7 @@ header h1 {
 header p {
     font-size: 1.2rem;
     color: #191970;
+    font-weight:400;
 }
 .container {
     max-width: 1200px;
@@ -70,7 +71,7 @@ header p {
 }
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0.2, 0.2);
 }
 .highlight {
     background-color: #0000ff;
@@ -98,6 +99,7 @@ footer {
 }
 footer p {
     font-size: 0.9rem;
+    color:black;
 }
 footer a {
     color: #fff;
