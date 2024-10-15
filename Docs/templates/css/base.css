@@ -6,7 +6,7 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    background-color: #f7f8fa;
+    background-color: #f7f8fb;
 }
 header {
     background-color: #007bff;
@@ -31,10 +31,10 @@ nav a {
     font-weight: 600;
 }
 nav a:hover {
-    color: #e2e6ea;
+    color: red;
 }
 .content {
-    margin: 40px 0;
+    margin: 45px 0;
 }
 footer {
     background-color: #343a40;
@@ -43,8 +43,12 @@ footer {
     padding: 20px;
     margin-top: 40px;
 }
+footer :hover{
+    color:blue;
+}
 footer p {
     font-size: 0.9rem;
+    font-weight:500;
 }
 .hero {
     background: url('https://via.placeholder.com/1200x300') no-repeat center center/cover;
@@ -58,4 +62,5 @@ footer p {
 .hero h1 {
     font-size: 3rem;
     font-weight: 600;
+    width:100%;
 }
