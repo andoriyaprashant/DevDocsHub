@@ -1,0 +1,84 @@
+/* General reset for margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling: dark theme, full-screen layout, and centered content */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main container settings: central alignment and width control */
+.container {
+    text-align: center;
+    width: 80%;
+}
+
+/* Heading styling */
+h1 {
+    margin-bottom: 20px;
+    color: #61dafb;
+}
+
+/* Playground layout: flexbox for side-by-side editor and output */
+.playground {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Editor and output styling: equal width, height, and rounded corners */
+.editor, .output {
+    width: 48%;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Text editor styling: background, text color, padding, and font */
+.editor textarea {
+    width: 100%;
+    height: 100%;
+    background-color: #282c34;
+    color: #61dafb;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 8px;
+    resize: none;
+    font-family: 'Fira Code', monospace;
+}
+
+/* Output frame styling */
+.output iframe {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Button styling: color, size, and hover effect */
+button {
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}

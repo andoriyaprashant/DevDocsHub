@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Code Playground</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include CodeMirror CSS for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/theme/dracula.min.css"> <!-- Optional: Theme -->
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Code Playground</h1>
+        <div class="playground">
+            <!-- Textarea for CodeMirror to enhance -->
+            <div class="editor">
+                <textarea id="code">
+                    <!-- You can pre-load some example code here if needed -->
+                    console.log('Hello, World!');
+                </textarea>
+            </div>
+
+            <!-- Iframe to show the output -->
+            <div class="output">
+                <iframe id="result"></iframe>
+            </div>
+        </div>
+
+        <!-- Button to run the code -->
+        <button id="run-btn">Run Code</button>
+    </div>
+
+    <!-- Include CodeMirror JavaScript for functionality -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/mode/javascript/javascript.min.js"></script> <!-- Optional: JavaScript mode -->
+    <script src="playground.js"></script>
+</body>
+</html>
