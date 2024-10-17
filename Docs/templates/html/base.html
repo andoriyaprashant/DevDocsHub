@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}DevDocsHub{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+     {% block extra_css %}{% endblock %}
 </head>
 <body>
     <!-- Header -->
@@ -18,8 +20,9 @@
                 </div>
                 <div>
                     <a href="{% url 'docs_list' %}">Docs</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+                    <a href="{% url 'about' %}">About</a>
+                    <a href="{% url 'languages' %}">Languages</a>
+                    <a href="{% url 'contact' %}">Contact</a>
                 </div>
             </nav>
         </div>

@@ -123,7 +123,7 @@ class Command(BaseCommand):
             if self.interactive:
                 answer = None
                 while not answer or answer not in "yn":
-                    answer = input("Do you wish to proceed? [y/N] ")
+                    answer = input("Do you wish to proceed? [yN] ")
                     if not answer:
                         answer = "n"
                         break

@@ -16,3 +16,4 @@ class Documentation(models.Model):
 
     def __str__(self):
         return self.doc_title
+
