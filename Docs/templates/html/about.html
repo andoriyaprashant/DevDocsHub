@@ -1,0 +1,94 @@
+{% extends "html/base.html" %}
+
+{% block title %}
+DevDocsHub - About
+{% endblock %}
+
+{% block body %}
+<h1 class="about-title">About Us</h1>
+<div class="about-section">
+    <p>
+        DevDocsHub is a robust Django-based web application designed to serve as a comprehensive repository for programming and open-source documentation.
+    </p>
+</div>
+
+<div class="about-details">
+    <h3>DevDocsHub: Your One-Stop Shop for Programming Documentation</h3>
+    <p>
+        DevDocsHub empowers developers and learners alike by providing a wealth of essential resources, ranging from programming language documentation to open-source tutorials, all in one place.
+    </p>
+    <p>
+        Our mission is to create a centralized hub for developers to enhance their coding skills and discover valuable insights into open-source projects.
+    </p>
+    
+    <h3>Why Use DevDocsHub?</h3>
+    <ul class="about-list">
+        <li><strong>Consolidated Knowledge:</strong> Comprehensive documentation for various programming languages and popular open-source projects, along with step-by-step tutorials.</li>
+        <li><strong>Enhanced Learning:</strong> Simplifies access to technical resources, empowering developers to learn and improve their skills faster.</li>
+        <li><strong>Improved Efficiency:</strong> No more scattered searches—DevDocsHub brings the most relevant information under one roof for maximum productivity.</li>
+    </ul>
+
+    <h3>Our Mission</h3>
+    <p>
+        At DevDocsHub, we strive to democratize access to programming knowledge. Our mission is to bridge the gap between learners and the information they need to succeed in the tech world. By offering comprehensive and reliable resources, we aim to support developers at every stage of their learning journey, from beginners to experienced professionals.
+    </p>
+
+    <h3>Contributors</h3>
+    <p>
+        DevDocsHub is powered by a dedicated group of contributors who are passionate about open-source projects and sharing knowledge. Our contributors come from diverse backgrounds, bringing their unique expertise and insights to enhance the platform and make it more valuable for the community.
+    </p>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<style>
+    /* About page styles */
+    .about-title {
+        text-align: left;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    
+    .about-section {
+        background-color: #e0e0e0;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }
+
+    .about-details {
+        background-color: #f0f0f0;
+        padding: 25px;
+        border-radius: 8px;
+    }
+
+    .about-details h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: #007bff;
+    }
+
+    .about-list {
+        list-style-type: square;
+        margin-left: 20px;
+    }
+
+    .about-list li {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+
+    .about-details p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .about-section p, .about-details p {
+        line-height: 1.7;
+        text-align: justify;
+    }
+</style>
+{% endblock %}
