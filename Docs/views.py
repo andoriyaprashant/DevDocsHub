@@ -21,3 +21,9 @@ def search_language(request):
             return redirect(language.official_website)
     return JsonResponse({'error': 'No programming language found'}, status=404)
 
+def about(request):
+    return render(request, 'html/about.html')
+
+def contact(request):
+    return render(request, 'html/contact_us.html')
+

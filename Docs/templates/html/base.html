@@ -1,25 +1,102 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}DevDocsHub{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: #f7f8fb;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 600;
+        }
+        nav a:hover {
+            color: red;
+        }
+        .content {
+            margin: 45px 0;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer :hover{
+            color:blue;
+        }
+        footer p {
+            font-size: 0.9rem;
+            font-weight:500;
+        }
+        .hero {
+            
+            height: 300px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            color:black;
+            width:100%;
+        }
+        .comp{
+            margin-left: -100px;
+        }
+        .comp1{
+            margin-right: -60px;
+        }
+    </style>
     <!-- Header -->
     <header>
         <div class="container">
             <nav>
-                <div>
+                <div class="comp">
                     <a href="{% url 'home' %}">DevDocsHub</a>
                 </div>
-                <div>
-                    <a href="{% url 'docs_list' %}">Docs</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+                <div class="comp1">
+                    <a href="{% url 'home' %}">Home</a>
+                    <a href="#">Languages</a>
+                    <a href="{% url 'about' %}">About</a>
+                    <a href="{% url 'contact' %}">Contact</a>
                 </div>
             </nav>
         </div>
@@ -27,10 +104,8 @@
 
     <!-- Main Content Area -->
     <div class="container content">
-        {% block content %}
-        <div class="hero">
-            <h1>Welcome to DevDocsHub</h1>
-        </div>
+        {% block body %}
+        
         {% endblock %}
     </div>
 
