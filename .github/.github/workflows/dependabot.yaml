@@ -1,0 +1,31 @@
+version: 2
+updates:
+  # Enable version updates for Python (Django)
+  - package-ecosystem: "pip"
+    # Look for `requirements.txt` or `Pipfile` in the root directory
+    directory: "/"
+    # Check for updates monthly
+    schedule:
+      interval: "monthly"
+    # Add default reviewers if needed
+    # reviewers:
+       - "andoriyaprashant"
+
+  # Enable version updates for JavaScript (npm packages)
+  - package-ecosystem: "npm"
+    # Look for `package.json` and `package-lock.json` files in the `root` directory
+    directory: "/"
+    # Check for updates monthly
+    schedule:
+      interval: "monthly"
+    # reviewers:
+       - "andoriyaprashant"
+
+  # Enable version updates for CSS/HTML-related packages (if managed via npm)
+  - package-ecosystem: "npm"
+    # Look for `package.json` related to CSS frameworks (like Bootstrap) in a frontend directory if applicable
+    directory: "/static"  # Adjust the directory if you have a specific frontend directory
+    schedule:
+      interval: "monthly"
+    # reviewers:
+       - "andoriyaprashant"
