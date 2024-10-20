@@ -88,6 +88,7 @@ This guide explains how to add data to the `ProgrammingLanguage` and `Documentat
    python manage.py loaddata programminglanguage.json
    python manage.py loaddata docomentation.json
    ```
+![download](https://github.com/user-attachments/assets/f9dd9390-b451-4937-9986-8eab1a48fdd2)
 
 **Contributing to DevDocsHub**
 
