@@ -8,6 +8,16 @@ DevDocsHub is a powerful Django-based web application designed to empower develo
 * **Enhanced Learning:** By streamlining access to valuable resources, DevDocsHub simplifies the process of acquiring and strengthening technical skills.
 * **Improved Efficiency:**  No more hunting for information scattered across the web. DevDocsHub provides an efficient way to find what you need, enabling developers of all levels to work more productively.
 
+* **Table of Contents**
+   - [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+   - [Data Insertion Guide](#data-insertion-guide)
+   - [Contributing to DevDocsHub](#contributing-to-devdocshub)
+   - [License](#license)
+   - [Contact](#contact)
+
+
 **Getting Started**
 
 DevDocsHub is easy to set up and use. Here's a quick guide:
@@ -129,6 +139,13 @@ We welcome contributions from the community! Here's how to get involved:
 7. **Create a Pull Request:**
 
 Head back to your forked repository on GitHub and navigate to the "Pull requests" tab. Click on "New pull request" to submit your changes for review and potential merging into the main DevDocsHub repository.
+
+**License:**
+Licensed
+
+**Contact Information:**
+For any issue in contribution, contact @andoriyaprashant .
+
 
 **We appreciate your contributions!**
 
