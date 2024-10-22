@@ -1,6 +1,31 @@
-**DevDocsHub: Your One-Stop Shop for Programming Documentation**
+# <p>DevDocsHub: Your One-Stop Shop for Programming Documentation
+<img  src="https://readme-typing-svg.herokuapp.com?color=45ffaa&size=40&width=900&height=80&lines=Welcome-to-DevDocsHub"/>
+</p>
 
 DevDocsHub is a powerful Django-based web application designed to empower developers and learners. It aims to be the ultimate resource for programming knowledge and open-source exploration, offering a user-friendly interface and a wealth of essential materials.
+<br/>
+<table align="center">
+    <thead align="center">
+        <tr border: 2px;>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Close PRs</b></td>
+        </tr>
+     </thead>
+    <tbody>
+      <tr>
+          <td><img alt="Stars" src="https://img.shields.io/github/stars/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+          <td><img alt="Forks" src="https://img.shields.io/github/forks/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+          <td><img alt="Issues" src="https://img.shields.io/github/issues/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+          <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+          <td><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/andoriyaprashant/DevDocsHub?style=flat&color=critical&logo=github"/></td>
+      </tr>
+    </tbody>
+</table>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
 
 **Why Use DevDocsHub?**
 
