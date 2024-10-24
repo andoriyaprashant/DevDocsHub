@@ -32,6 +32,40 @@ DevDocsHub is a powerful Django-based web application designed to empower develo
 * **Consolidated Knowledge:** DevDocsHub brings together comprehensive documentation for various programming languages, information on popular open-source projects, and step-by-step tutorials in a single, centralized platform.
 * **Enhanced Learning:** By streamlining access to valuable resources, DevDocsHub simplifies the process of acquiring and strengthening technical skills.
 * **Improved Efficiency:**  No more hunting for information scattered across the web. DevDocsHub provides an efficient way to find what you need, enabling developers of all levels to work more productively.
+<div align="center">
+    <br>
+    <!-- Table for GitHub Repo Stats -->
+    <table align="center" border="1" cellpadding="10" cellspacing="0">
+        <thead align="center">
+            <tr>
+                <td><b>🌟 Stars</b></td>
+                <td><b>🍴 Forks</b></td>
+                <td><b>🐛 Issues</b></td>
+                <td><b>🔔 Open PRs</b></td>
+                <td><b>🔕 Closed PRs</b></td>
+                <td><b>🛠️ Languages</b></td>
+                <td><b>🌐 Contributors</b></td>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td><img alt="Stars" src="https://img.shields.io/github/stars/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+                <td><img alt="Forks" src="https://img.shields.io/github/forks/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+                <td><img alt="Issues" src="https://img.shields.io/github/issues/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+                <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+                <td><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/andoriyaprashant/DevDocsHub?style=flat&color=critical&logo=github"/></td>
+                <td><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/andoriyaprashant/DevDocsHub?style=flat&color=critical&logo=github"/></td>
+                <td><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/andoriyaprashant/DevDocsHub?color=2b9348"/></td>
+            </tr>
+        </tbody>
+    </table>
+    
+   <br>
+    <!-- Repository link -->
+    <a href="https://github.com/andoriyaprashant/DevDocsHub" target="_blank">
+        <strong>Check out the DevDocsHub repository on GitHub</strong>
+    </a>
+</div>
 
 **Getting Started**
 
