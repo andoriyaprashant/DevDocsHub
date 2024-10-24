@@ -78,6 +78,62 @@
         "official_website": "https://www.rust-lang.org/",
         "description": "Rust is known for its focus on safety and performance, often used in system programming and embedded devices."
       }
+    },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "C#",
+        "official_website": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/",
+        "description": "C# is best suited for applications on Windows, Android, and iOS, as it takes the help of the integrated development environment product, Microsoft Visual C++."
     }
+  },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "Matlab",
+        "official_website": "https://www.mathworks.com/help/matlab/",
+        "description": "MATLAB is a programming platform designed specifically for engineers and scientists to analyze and design systems and products that transform our world."
+    }
+  },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "TypeScript",
+        "official_website": "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html",
+        "description": "TypeScript is a free and open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript."
+    }
+  },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "SQL",
+        "official_website": "https://dev.mysql.com/doc/mysql-getting-started/en/",
+        "description": "SQL is a standard database query language. It is used to access and manipulate data in databases."
+    }
+  },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "HTML",
+        "official_website": "https://www.learn-html.org/",
+        "description": "HTML(HyperText Markup Language) is the standard language for creating web pages and applications. HTML is used to create web pages."
+    }
+  },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "CSS",
+        "official_website": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        "description": "CSS (Cascading Style Sheets) is a style sheet language used to describe how a page that was produced in a markup language is presented."
+    }
+  },
+    {
+      "model": "Docs.programminglanguage",
+      "fields": {
+        "name": "C",
+        "official_website": "https://learn.microsoft.com/en-us/cpp/c-language/?view=msvc-170",
+        "description": "C is a procedural, general-purpose programming language that allows low-level access to system memory."
+    }
+  }
   ]
   
