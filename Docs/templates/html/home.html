@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -310,14 +311,15 @@ nav ul li a:hover {
     ></script>
   
     <nav style="color: white;">
-        <h1>DevDocsHub</h1>
+        <a href="{% url 'home' %}" class="navbar-logo">
+            <img src="{% static 'images/logo5-rem.png' %}" alt="DevDocsHub Logo" style="height: 100px; width: 180px">
+        </a>
         <ul>
             <li><h3><b><a href="{% url 'home' %}">Home</a></li></b></h3>
             <li><h3><b><a href="#">Languages</a></li></b></h3>
             <li><h3><b><a href="{% url 'about' %}">About</a></li></b></h3>
             <li><h3><b><a href="{% url 'contact' %}">Contact</a></li></b></h3>
         </ul>
-
     </nav>
 
    
