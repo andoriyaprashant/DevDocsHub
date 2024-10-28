@@ -9,4 +9,6 @@ urlpatterns = [
     path('language/<int:language_id>/', views.documentation_list, name='documentation_list'),
     path('search/', views.search_language, name='search_language'),
     path('programming_languages_info/', views.programming_languages_info, name='programming_languages_info'),
+    path('open_source.html', views.open_source, name='open_source'), 
+    path('Tut_Guides.html', views.Tut_Guides, name='Tut_Guides'),
 ]

@@ -35,3 +35,9 @@ def contact(request):
 
 def programming_languages_info(request):
     return render(request, 'programming_languages_info.html')
+
+def open_source(request):
+    return render(request, 'open_source.html')
+
+def Tut_Guides(request):
+    return render(request, 'Tut_Guides.html')
