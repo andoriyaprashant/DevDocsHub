@@ -5,10 +5,26 @@ DevDocsHub - Contact
 {% endblock %}
 
 {% block body %}
+<!-- Bootstrap Alert for Messages -->
+{% if messages %}
+    <div class="container mt-3">
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<br>
 <h1 class="contact-title">Reach out to us</h1>
 
 <div class="contact-section">
-    <form action="#" method="POST" class="contact-form">
+    <form action="{% url 'contact' %}" method="POST" class="contact-form" onsubmit="handleSubmit(event)">
+        {% csrf_token %}
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -26,6 +42,8 @@ DevDocsHub - Contact
         </div>
     </form>
 </div>
+
+
 {% endblock %}
 
 {% block extra_js %}
@@ -94,4 +112,8 @@ DevDocsHub - Contact
         background-color: #0056b3;
     }
 </style>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 {% endblock %}
