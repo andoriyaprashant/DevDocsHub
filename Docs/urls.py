@@ -9,5 +9,4 @@ urlpatterns = [
     path('language/<int:language_id>/', views.documentation_list, name='documentation_list'),
     path('search/', views.search_language, name='search_language'),
     path('programming_languages_info/', views.programming_languages_info, name='programming_languages_info'),
-
 ]
