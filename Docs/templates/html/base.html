@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock %}</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/base.css">
 </head>
@@ -113,7 +114,7 @@
                 </div>
                 <div class="comp1">
                     <a href="{% url 'home' %}">Home</a>
-                    <a href="#">Languages</a>
+                    <a href="{% url 'programming_languages_info' %}">Languages</a>
                     <a href="{% url 'about' %}">About</a>
                     <a href="{% url 'contact' %}">Contact</a>
                 </div>

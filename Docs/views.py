@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from .models import ProgrammingLanguage, Documentation
+from .models import ProgrammingLanguage, Documentation,Contact
 from django.shortcuts import get_object_or_404, redirect
 from django.http import JsonResponse
-
+from django.contrib import messages
 
 def home(request):
     languages = ProgrammingLanguage.objects.all()
@@ -35,9 +35,3 @@ def contact(request):
 
 def programming_languages_info(request):
     return render(request, 'programming_languages_info.html')
-
-def open_source(request):
-    return render(request, 'open_source.html')
-
-def Tut_Guides(request):
-    return render(request, 'Tut_Guides.html')
