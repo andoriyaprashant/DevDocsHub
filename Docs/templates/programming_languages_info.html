@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DevDocsHub - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav {
+            background-color: #007bff;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            color:#0056b3;
+            text-decoration: none;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Reduced the height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #555;
+            flex-grow: 1;
+        }
+
+        .card .btn {
+            align-self: flex-start;
+            margin-top: 15px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #fff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .search-bar {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .search-bar input[type="text"] {
+            width: 50%;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .dark-mode header {
+            background-color: #222;
+        }
+
+        .dark-mode nav {
+            background-color: #444;
+        }
+
+        .dark-mode nav ul li a {
+            color: #ddd;
+        }
+
+        .dark-mode .card {
+            background-color: #444;
+        }
+
+        .dark-mode .card p {
+            color: #bbb;
+
+        }
+
+        .dark-mode footer {
+            background-color: #222;
+        }
+
+        .dark-mode .search-bar input[type="text"] {
+            background-color: #555;
+            border-color: #777;
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .card h2 {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .search-bar input[type="text"] {
+                width: 80%;
+            }
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            /* Distance from the bottom of the viewport */
+            right: 20px;
+            /* Distance from the right of the viewport */
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+            /* Ensure the button is above other content */
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #0056b3;
+        }
+        nav {
+    background-color: #007bff;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    display: inline-block;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 50%; /* Adjust this value as per requirement */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    color: #0056b3;
+    text-decoration: none;
+}
+.fa-brands{
+    color:red;
+    
+}
+.icons {
+    color: rgb(255, 30, 0);
+    cursor: pointer;
+   
+    
+}
+.icons :hover{
+    color: rgb(0, 149, 255);
+    box-shadow: 2px 2px 2px 2px red
+    
+    
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="gtranslate_wrapper"></div>
+
+    <script>
+  
+    window.gtranslateSettings = {
+      "default_language":"en",
+      "detect_browser_language":true,
+      "wrapper_selector":".gtranslate_wrapper"
+    }
+  
+    </script>
+  
+    <script 
+      src="https://cdn.gtranslate.net/widgets/latest/float.js"
+      defer
+    ></script>
+  
+    <nav style="color: white;">
+        <h1>DevDocsHub</h1>
+        <ul>
+            <li><h3><b><a href="{% url 'home' %}">Home</a></li></b></h3>
+            <li><h3><b><a href="#">Languages</a></li></b></h3>
+            <li><h3><b><a href="{% url 'about' %}">About</a></li></b></h3>
+            <li><h3><b><a href="{% url 'contact' %}">Contact</a></li></b></h3>
+        </ul>
+
+    </nav>
+
+   
+
+
+                 <!-- Section 2 -->
+   
+    <div class="container">
+        <h2 style="font-weight: 700;" class="text-center">You can search about any topic as per your interest <i class="fa-solid fa-thumbs-up" style="color: #0056b3;"></i></h2>
+        <div class="search-bar w-75 pb-4">
+            <form id="search-form" method="GET" action="/search/">
+                <input type="text" name="name" placeholder="Search programming language..." required>
+                <button type="submit" class="btn btn-primary w-25">Search</button>
+            </form>
+        </div>
+        <section class="grid">
+            <div class="row">
+                <!-- home.html -->
+
+<div class="col-sm-4">
+    <div class="card">
+        
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+          
+            <class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">
+                C++</h5>
+            <p class="card-text">Explore comprehensive documentation for C++.</p>
+            <a href="https://isocpp.org/" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+</div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+          
+                            <class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">Java</h5>
+                            <p class="card-text">Explore comprehensive documentation for Java.</p>
+                            <a href="https://docs.oracle.com/en/java/" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+          
+                            <class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">
+                                Python</h5>
+                            <p class="card-text">Explore comprehensive documentation for Python.</p>
+                            <a href="https://www.python.org/" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--New line --> 
+                <div class="col-sm-4">
+                    <div class="card">
+                        
+            
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+          
+          
+                            <class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">
+                                HTML</h5>
+                            <p class="card-text">Explore comprehensive documentation for HTML.</p>
+                            <a href="https://www.learn-html.org/" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        
+            
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+          
+          
+                            <class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">
+                                CSS</h5>
+                            <p class="card-text">Explore comprehensive documentation for CSS.</p>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        
+            
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+          
+          
+                            <class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">
+                                Javascript</h5>
+                            <p class="card-text">Explore comprehensive documentation for Javascript.</p>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        
+            
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" />
+          
+          
+                            <class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">
+                                Django</h5>
+                            <p class="card-text">Explore comprehensive documentation for Django.</p>
+                            <a href="https://docs.djangoproject.com/en/5.1/" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        
+            
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg" />
+          
+          
+                            <class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">
+                                Rust</h5>
+                            <p class="card-text">Explore comprehensive documentation for Rust.</p>
+                            <a href="https://www.rust-lang.org/" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        
+            
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/perl/perl-original.svg" />
+          
+          
+                            <class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">
+                            Perl</h5>
+                            <p class="card-text">Explore comprehensive documentation for Perl.</p>
+                            <a href="https://www.perl.org/docs.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        
+            
+                       
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
+          
+          
+          
+                            <class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">
+                                MY SQL</h5>
+                            <p class="card-text">Explore comprehensive documentation for MY SQL.</p>
+                            <a href="https://dev.mysql.com/doc/mysql-getting-started/en/" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        
+            
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+          
+          
+                            <class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">
+                                PHP</h5>
+                            <p class="card-text">Explore comprehensive documentation for PHP.</p>
+                            <a href="https://www.php.net/" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        
+            
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" />
+          
+          
+                            <class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">
+                                Go</h5>
+                            <p class="card-text">Explore comprehensive documentation for Java.</p>
+                            <a href= "https://golang.org/" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        
+            
+                        
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg" />
+          
+          
+          
+                            <class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">
+                                Ruby</h5>
+                            <p class="card-text">Explore comprehensive documentation for Ruby.</p>
+                            <a href="https://www.ruby-lang.org/en/" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-sm-4">
+                    <div class="card">
+                        
+            
+                        
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" />
+          
+          
+          
+                            <class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">
+                                Swift</h5>
+                            <p class="card-text">Explore comprehensive documentation for Swift.</p>
+                            <a href="https://swift.org/" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-sm-4">
+                    <div class="card">
+                        
+            
+                       
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" />
+          
+          
+          
+                            <class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title pt-3" style="font-size: 18px; font-weight: 600; color: #005bbd;">
+                                Kotlin</h5>
+                            <p class="card-text">Explore comprehensive documentation for Kotlin.</p>
+                            <a href="https://kotlinlang.org/" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+               
+
+
+            </div>
+        </section>
+    </div>
+    <div class="row text-center">
+        <h3 style="font-weight: 700; color: #033061; font-size: 30px;">Connect with us:</h3>
+        <div class="icons" style="font-size: 30px;">
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-linkedin" style="color: #005bbd;"></i>
+        <i class="fa-brands fa-youtube" style="color: red;"></i>
+    </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 DevDocsHub. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+
+    <script>
+        // Toggle dark mode function
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+    <script>
+        const words = ["Web Development!", "Data Science!", "Artificial Intelligence!", "Open Source!", "Machine Learning!"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        const changingText = document.getElementById("changing-text");
+    
+        function type() {
+            if (charIndex < words[wordIndex].length) {
+                changingText.textContent += words[wordIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 150); // Speed of typing each character
+            } else {
+                setTimeout(erase, 1000); // Pause before erasing
+            }
+        }
+    
+        function erase() {
+            if (charIndex > 0) {
+                changingText.textContent = words[wordIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 100); // Speed of erasing each character
+            } else {
+                wordIndex = (wordIndex + 1) % words.length; // Move to the next word
+                setTimeout(type, 300); // Start typing the next word
+            }
+        }
+    
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(type, 1000); // Initial delay before starting the effect
+        });
+    </script>
+    
+</body>
+
+</html>

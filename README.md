@@ -1,12 +1,81 @@
-**DevDocsHub: Your One-Stop Shop for Programming Documentation**
+# <p>DevDocsHub: Your One-Stop Shop for Programming Documentation
+<img  src="https://readme-typing-svg.herokuapp.com?color=45ffaa&size=40&width=900&height=80&lines=Welcome-to-DevDocsHub"/>
+</p>
 
 DevDocsHub is a powerful Django-based web application designed to empower developers and learners. It aims to be the ultimate resource for programming knowledge and open-source exploration, offering a user-friendly interface and a wealth of essential materials.
+<br/>
+<table align="center">
+    <thead align="center">
+        <tr border: 2px;>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Close PRs</b></td>
+        </tr>
+     </thead>
+    <tbody>
+      <tr>
+          <td><img alt="Stars" src="https://img.shields.io/github/stars/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+          <td><img alt="Forks" src="https://img.shields.io/github/forks/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+          <td><img alt="Issues" src="https://img.shields.io/github/issues/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+          <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+          <td><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/andoriyaprashant/DevDocsHub?style=flat&color=critical&logo=github"/></td>
+      </tr>
+    </tbody>
+</table>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
 
 **Why Use DevDocsHub?**
 
 * **Consolidated Knowledge:** DevDocsHub brings together comprehensive documentation for various programming languages, information on popular open-source projects, and step-by-step tutorials in a single, centralized platform.
 * **Enhanced Learning:** By streamlining access to valuable resources, DevDocsHub simplifies the process of acquiring and strengthening technical skills.
 * **Improved Efficiency:**  No more hunting for information scattered across the web. DevDocsHub provides an efficient way to find what you need, enabling developers of all levels to work more productively.
+<div align="center">
+    <br>
+    <!-- Table for GitHub Repo Stats -->
+    <table align="center" border="1" cellpadding="10" cellspacing="0">
+        <thead align="center">
+            <tr>
+                <td><b>🌟 Stars</b></td>
+                <td><b>🍴 Forks</b></td>
+                <td><b>🐛 Issues</b></td>
+                <td><b>🔔 Open PRs</b></td>
+                <td><b>🔕 Closed PRs</b></td>
+                <td><b>🛠️ Languages</b></td>
+                <td><b>🌐 Contributors</b></td>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td><img alt="Stars" src="https://img.shields.io/github/stars/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+                <td><img alt="Forks" src="https://img.shields.io/github/forks/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+                <td><img alt="Issues" src="https://img.shields.io/github/issues/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+                <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/andoriyaprashant/DevDocsHub?style=flat&logo=github"/></td>
+                <td><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/andoriyaprashant/DevDocsHub?style=flat&color=critical&logo=github"/></td>
+                <td><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/andoriyaprashant/DevDocsHub?style=flat&color=critical&logo=github"/></td>
+                <td><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/andoriyaprashant/DevDocsHub?color=2b9348"/></td>
+            </tr>
+        </tbody>
+    </table>
+    
+   <br>
+    <!-- Repository link -->
+    <a href="https://github.com/andoriyaprashant/DevDocsHub" target="_blank">
+        <strong>Check out the DevDocsHub repository on GitHub</strong>
+    </a>
+</div>
+
+* **Table of Contents**
+   - [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+   - [Data Insertion Guide](#data-insertion-guide)
+   - [Contributing to DevDocsHub](#contributing-to-devdocshub)
+   - [License](#license)
+   - [Contact](#contact)
+
 
 **Getting Started**
 
@@ -78,6 +147,7 @@ This guide explains how to add data to the `ProgrammingLanguage` and `Documentat
    python manage.py loaddata programminglanguage.json
    python manage.py loaddata docomentation.json
    ```
+![download](https://github.com/user-attachments/assets/f9dd9390-b451-4937-9986-8eab1a48fdd2)
 
 **Contributing to DevDocsHub**
 
@@ -129,6 +199,13 @@ We welcome contributions from the community! Here's how to get involved:
 7. **Create a Pull Request:**
 
 Head back to your forked repository on GitHub and navigate to the "Pull requests" tab. Click on "New pull request" to submit your changes for review and potential merging into the main DevDocsHub repository.
+
+**License:**
+Licensed
+
+**Contact Information:**
+For any issue in contribution, contact @andoriyaprashant .
+
 
 **We appreciate your contributions!**
 
