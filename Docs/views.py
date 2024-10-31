@@ -24,6 +24,9 @@ def search_language(request):
 def about(request):
     return render(request, 'html/about.html')
 
+def playground(request):
+    return render(request, 'playground.html')
+
 def contact(request):
     return render(request, 'html/contact_us.html')
 
