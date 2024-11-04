@@ -1,3 +1,4 @@
+{% extends "html/base.html" %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +66,6 @@
             font-weight:500;
         }
         .hero {
-            
             height: 300px;
             color: black;
             display: flex;
@@ -105,21 +105,9 @@
     ></script>
 
     <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="comp">
-                    <a href="{% url 'home' %}">DevDocsHub</a>
-                </div>
-                <div class="comp1">
-                    <a href="{% url 'home' %}">Home</a>
-                    <a href="#">Languages</a>
-                    <a href="{% url 'about' %}">About</a>
-                    <a href="{% url 'contact' %}">Contact</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+    {% block nav %}
+
+    {% endblock %}
 
     <!-- Main Content Area -->
     <div class="container content">

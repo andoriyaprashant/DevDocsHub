@@ -123,9 +123,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Include both directories in STATICFILES_DIRS
 STATICFILES_DIRS = [
     BASE_DIR / 'Static',
+    os.path.join(BASE_DIR, 'static')
 ]
+
+# Define STATIC_ROOT for collected static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

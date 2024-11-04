@@ -28,11 +28,6 @@ def search_language(request):
 def about(request):
     return render(request, 'html/about.html')
 
-<<<<<<< HEAD
-def playground(request):
-    return render(request, 'playground.html')
-=======
->>>>>>> 41d31662396e767abc75278223dec88c15488c48
 
 def contact(request):
     return render(request, 'html/contact_us.html')
@@ -41,8 +36,9 @@ def contact(request):
 def programming_languages_info(request):
     return render(request, 'programming_languages_info.html')
 
-def open_source(request):
-    return render(request, 'open_source.html')
 
-def Tut_Guides(request):
-    return render(request, 'Tut_Guides.html')
+
+
+
+def tutorials(request):
+    return render(request, "tutorials.html")
