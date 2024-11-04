@@ -8,7 +8,11 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('language/<int:language_id>/', views.documentation_list, name='documentation_list'),
     path('search/', views.search_language, name='search_language'),
+<<<<<<< HEAD
+    path('playground/',views.playground,name = 'playground'),
+=======
     path('programming_languages_info/', views.programming_languages_info, name='programming_languages_info'),
     path('open_source.html', views.open_source, name='open_source'), 
     path('Tut_Guides.html', views.Tut_Guides, name='Tut_Guides'),
+>>>>>>> 41d31662396e767abc75278223dec88c15488c48
 ]

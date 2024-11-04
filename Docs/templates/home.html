@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,12 +24,13 @@
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
+            max-width: 100%;
             background-color: #f9f9f9;
             color: #333;
             transition: background-color 0.3s ease, color 0.3s ease;
-        }
+        }   
 
-        nav {
+        /* nav {
             background-color: #007bff;
             padding: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -50,14 +52,14 @@
             transition: background-color 0.3s ease;
             font-weight: bold;
             color: white;
-        }
+        } */
 
-        nav ul li a:hover {
+        /* nav ul li a:hover {
             background-color: #f9f9f9;
             border-radius: 5px;
             color:#0056b3;
             text-decoration: none;
-        }
+        } */
 
         header {
             background-color: #007bff;
@@ -227,67 +229,144 @@
         .dark-mode-toggle:hover {
             background-color: #0056b3;
         }
+                /*
         nav {
-    background-color: #007bff;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+            background-color: #007bff;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav h2 {
+            margin: 0;
+            color: white;
+            font-size: 24px;
+            display: inline-block;
+        }
 
-nav h2 {
-    margin: 0;
-    color: white;
-    font-size: 24px;
-    display: inline-block;
-}
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            width: 50%;  Adjust this value as per requirement 
+            margin: 0;
+            padding: 0;
+        }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    width: 50%; /* Adjust this value as per requirement */
-    margin: 0;
-    padding: 0;
-}
+        nav ul li {
+            margin: 0;
+        }
 
-nav ul li {
-    margin: 0;
-}
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            color: white;
+            display: inline-block;
+        }
 
-nav ul li a {
-    text-decoration: none;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-    color: white;
-    display: inline-block;
-}
+        nav ul li a:hover {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            color: #0056b3;
+            text-decoration: none;
+        }*/
+        .fa-brands{
+            color:red;
+            
+        }
+        .icons {
+            color: rgb(255, 30, 0);
+            cursor: pointer;
 
-nav ul li a:hover {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    color: #0056b3;
-    text-decoration: none;
-}
-.fa-brands{
-    color:red;
-    
-}
-.icons {
-    color: rgb(255, 30, 0);
-    cursor: pointer;
-   
-    
-}
-.icons :hover{
-    color: rgb(0, 149, 255);
-    box-shadow: 2px 2px 2px 2px red
-    
-    
-}
-
+            
+        }
+        .icons :hover{
+            color: rgb(0, 149, 255);
+            box-shadow: 2px 2px 2px 2px red  
+        }
+        nav {
+            background-color: #007bff;
+            /* padding: 10px; */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            height:px80;
+            width: 100%;
+            padding: 5px;
+        }
+        nav a {
+            /* margin:0px 10px; */
+            color: white;
+            text-decoration: none;
+            border:  2px solid aliceblue;
+            /* padding: 5px ; */
+            border-radius: 4px;
+            display:flexbox;
+            justify-content: space-between;
+            width: 50%;  
+            margin: 10px;
+            padding: 5px 10px;
+        } 
+        nav a:hover {
+            background-color: #6cb1fb;
+            text-decoration: none;
+        }
+        #logo {
+            content: url('{% static "img/logo_bf.png" %}');
+            padding: 0;
+            width: 20%;
+            height: auto;
+        }
+        .comp{
+            /* margin-left: -100px; */
+            background-color: #007bff;
+            /* width: 8%;
+            height: 4px; */
+            align-self:center;
+            justify-self: center;
+            background-position:center;
+            padding: 0;
+        }
+        .comp1{
+            /* margin-right: -60px; */
+            display: inline-flex;
+            flex-direction: row; 
+            margin: 5px;
+            padding: 2px;
+            align-self: center;
+            justify-self: stretch;
+        }
+        @media(max-width:1300px){
+            .comp {
+                width:50%;
+            }
+            #logo {
+                width: 50%;
+            }
+        }
+        @media(max-width:800px){
+            .comp {
+                width:70%;
+            }
+            #logo {
+                width: 70%;
+            }
+        }
+        @media(max-width:600px){
+            #logo{
+                content: url('{% static "img/logo_sf.png" %}');
+                width: 40%;
+            }
+        }
+        @media(max-width:50px){
+            #logo{
+                content: url('{% static "img/ss_logo.png" %}');
+                width: 80%;
+            }
+        }
     </style>
 </head>
 
@@ -308,18 +387,36 @@ nav ul li a:hover {
       src="https://cdn.gtranslate.net/widgets/latest/float.js"
       defer
     ></script>
-  
-    <nav style="color: white;">
-        <h1>DevDocsHub</h1>
-        <ul>
-            <li><h3><b><a href="{% url 'home' %}">Home</a></li></b></h3>
-            <li><h3><b><a href="#">Languages</a></li></b></h3>
-            <li><h3><b><a href="{% url 'about' %}">About</a></li></b></h3>
-            <li><h3><b><a href="{% url 'contact' %}">Contact</a></li></b></h3>
-        </ul>
-
+    {% block nav %}
+    <nav>
+        <div class="comp">
+            <!-- <a href="{% url 'home' %}">DevDocsHub</a> -->
+            <img id=logo src="{% static 'img/logo_bf.png' %}" alt="logo">
+        </div>
+        <div class="comp1">
+            <a href="{% url 'home' %}" class="nav-item">Home</a>
+            <a href="#" class="nav-item">Languages</a>
+            <a href="{% url 'about' %}" class="nav-item">About</a>
+            <a href="{% url 'contact' %}" class="nav-item">Contact</a>
+        </div>
     </nav>
-
+    <!-- <header>
+        <div class="container">
+            <nav>
+                <div class="comp">
+                    <a href="{% url 'home' %}">DevDocsHub</a>
+                     <img src="Docs/img/logo.png">
+                </div>
+                <div class="comp1">
+                    <a href="{% url 'home' %}">Home</a>
+                    <a href="#">Languages</a>
+                    <a href="{% url 'about' %}">About</a>
+                    <a href="{% url 'contact' %}">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header> -->
+    {% endblock %}
    
     <!-- Section 2 -->
     <div class="row mx-auto text-center pt-5">
