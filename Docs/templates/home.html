@@ -29,38 +29,6 @@
             color: #333;
             transition: background-color 0.3s ease, color 0.3s ease;
         }   
-
-        /* nav {
-            background-color: #007bff;
-            padding: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            padding: 10px 20px;
-            transition: background-color 0.3s ease;
-            font-weight: bold;
-            color: white;
-        } */
-
-        /* nav ul li a:hover {
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            color:#0056b3;
-            text-decoration: none;
-        } */
-
         header {
             background-color: #007bff;
             color: #fff;
@@ -395,7 +363,7 @@
         </div>
         <div class="comp1">
             <a href="{% url 'home' %}" class="nav-item">Home</a>
-            <a href="#" class="nav-item">Languages</a>
+            <a href="{% url 'languages' %}" class="nav-item">Languages</a>
             <a href="{% url 'about' %}" class="nav-item">About</a>
             <a href="{% url 'contact' %}" class="nav-item">Contact</a>
         </div>

@@ -1,4 +1,3 @@
-{% extends "html/base.html" %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -9,83 +8,339 @@
     <title>{% block title %}{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: 'Inter', sans-serif;
+                line-height: 1.6;
+                max-width: 100%;
+                background-color: #f9f9f9;
+                color: #333;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }   
+            header {
+                background-color: #007bff;
+                color: #fff;
+                padding: 40px;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            header h1 {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+    
+            header p {
+                font-size: 1.2rem;
+            }
+    
+            .container {
+                max-width: 1200px;
+                margin: 50px auto;
+                padding: 20px;
+            }
+    
+            .card {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                margin: 20px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+    
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+    
+            .card h2 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+    
+            .card p {
+                font-size: 1rem;
+                color: #555;
+                flex-grow: 1;
+            }
+    
+            .card .btn {
+                align-self: flex-start;
+                margin-top: 15px;
+            }
+    
+            footer {
+                background-color: #343a40;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+                margin-top: 50px;
+            }
+    
+            footer p {
+                font-size: 0.9rem;
+            }
+    
+            footer a {
+                color: #fff;
+            }
+    
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+            }
+    
+            .search-bar {
+                margin: 30px 0;
+                text-align: center;
+            }
+    
+            .search-bar input[type="text"] {
+                width: 50%;
+                padding: 10px;
+                font-size: 1rem;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+    
+            /* Dark Mode Styles */
+            .dark-mode {
+                background-color: #333;
+                color: #fff;
+            }
+    
+            .dark-mode header {
+                background-color: #222;
+            }
+    
+            .dark-mode nav {
+                background-color: #444;
+            }
+    
+            .dark-mode nav ul li a {
+                color: #ddd;
+            }
+    
+            .dark-mode .card {
+                background-color: #444;
+            }
+    
+            .dark-mode .card p {
+                color: #bbb;
+    
+            }
+    
+            .dark-mode footer {
+                background-color: #222;
+            }
+    
+            .dark-mode .search-bar input[type="text"] {
+                background-color: #555;
+                border-color: #777;
+                color: #fff;
+            }
+    
+            @media (max-width: 600px) {
+                header h1 {
+                    font-size: 2rem;
+                }
+    
+                .card h2 {
+                    font-size: 1.5rem;
+                }
+    
+                .btn {
+                    width: 100%;
+                    text-align: center;
+                }
+    
+                .search-bar input[type="text"] {
+                    width: 80%;
+                }
+            }
+    
+            .dark-mode-toggle {
+                position: fixed;
+                bottom: 20px;
+                /* Distance from the bottom of the viewport */
+                right: 20px;
+                /* Distance from the right of the viewport */
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                z-index: 1000;
+                /* Ensure the button is above other content */
+            }
+    
+            .dark-mode-toggle:hover {
+                background-color: #0056b3;
+            }
+                    /*
+            nav {
+                background-color: #007bff;
+                padding: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            nav h2 {
+                margin: 0;
+                color: white;
+                font-size: 24px;
+                display: inline-block;
+            }
+    
+            nav ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+                width: 50%;  Adjust this value as per requirement 
+                margin: 0;
+                padding: 0;
+            }
+    
+            nav ul li {
+                margin: 0;
+            }
+    
+            nav ul li a {
+                text-decoration: none;
+                padding: 10px 20px;
+                transition: background-color 0.3s ease;
+                font-weight: bold;
+                color: white;
+                display: inline-block;
+            }
+    
+            nav ul li a:hover {
+                background-color: #f9f9f9;
+                border-radius: 5px;
+                color: #0056b3;
+                text-decoration: none;
+            }*/
+            .fa-brands{
+                color:red;
+                
+            }
+            .icons {
+                color: rgb(255, 30, 0);
+                cursor: pointer;
+    
+                
+            }
+            .icons :hover{
+                color: rgb(0, 149, 255);
+                box-shadow: 2px 2px 2px 2px red  
+            }
+            nav {
+                background-color: #007bff;
+                /* padding: 10px; */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                display: flex;
+                justify-content: space-between;
+                height:px80;
+                width: 100%;
+                padding: 5px;
+            }
+            nav a {
+                /* margin:0px 10px; */
+                color: white;
+                text-decoration: none;
+                border:  2px solid aliceblue;
+                /* padding: 5px ; */
+                border-radius: 4px;
+                display:flexbox;
+                justify-content: space-between;
+                width: 50%;  
+                margin: 10px;
+                padding: 5px 10px;
+            } 
+            nav a:hover {
+                background-color: #6cb1fb;
+                text-decoration: none;
+            }
+            #logo {
+                content: url('{% static "img/logo_bf.png" %}');
+                padding: 0;
+                width: 20%;
+                height: auto;
+            }
+            .comp{
+                /* margin-left: -100px; */
+                background-color: #007bff;
+                /* width: 8%;
+                height: 4px; */
+                align-self:center;
+                justify-self: center;
+                background-position:center;
+                padding: 0;
+            }
+            .comp1{
+                /* margin-right: -60px; */
+                display: inline-flex;
+                flex-direction: row; 
+                margin: 5px;
+                padding: 2px;
+                align-self: center;
+                justify-self: stretch;
+            }
+            @media(max-width:1300px){
+                .comp {
+                    width:50%;
+                }
+                #logo {
+                    width: 50%;
+                }
+            }
+            @media(max-width:800px){
+                .comp {
+                    width:70%;
+                }
+                #logo {
+                    width: 70%;
+                }
+            }
+            @media(max-width:600px){
+                #logo{
+                    content: url('{% static "img/logo_sf.png" %}');
+                    width: 40%;
+                }
+            }
+            @media(max-width:50px){
+                #logo{
+                    content: url('{% static "img/ss_logo.png" %}');
+                    width: 80%;
+                }
+            }
+        </style>
+    
 </head>
 <body>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            background-color: #f7f8fb;
-        }
-        header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 15px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-right: 20px;
-            font-weight: 600;
-        }
-        nav a:hover {
-            color: red;
-        }
-        .content {
-            margin: 45px 0;
-        }
-        footer {
-            background-color: #343a40;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-        footer :hover{
-            color:blue;
-        }
-        footer p {
-            font-size: 0.9rem;
-            font-weight:500;
-        }
-        .hero {
-            height: 300px;
-            color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 600;
-            color:black;
-            width:100%;
-        }
-        .comp{
-            margin-left: -100px;
-        }
-        .comp1{
-            margin-right: -60px;
-        }
-    </style>
 
     <div class="gtranslate_wrapper"></div>
 
@@ -103,11 +358,21 @@
       src="https://cdn.gtranslate.net/widgets/latest/float.js"
       defer
     ></script>
-
-    <!-- Header -->
     {% block nav %}
-
+    <nav>
+        <div class="comp">
+            <!-- <a href="{% url 'home' %}">DevDocsHub</a> -->
+            <img id=logo src="{% static 'img/logo_bf.png' %}" alt="logo">
+        </div>
+        <div class="comp1">
+            <a href="{% url 'home' %}" class="nav-item">Home</a>
+            <a href="{% url 'languages' %}" class="nav-item">Languages</a>
+            <a href="{% url 'about' %}" class="nav-item">About</a>
+            <a href="{% url 'contact' %}" class="nav-item">Contact</a>
+        </div>
+    </nav>
     {% endblock %}
+
 
     <!-- Main Content Area -->
     <div class="container content">
@@ -117,9 +382,58 @@
     </div>
 
     <!-- Footer -->
+    <div class="row text-center">
+        <h3 style="font-weight: 700; color: #033061; font-size: 30px;">Connect with us:</h3>
+        <div class="icons" style="font-size: 30px;">
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-linkedin" style="color: #005bbd;"></i>
+        <i class="fa-brands fa-youtube" style="color: red;"></i>
+    </div>
+    </div>
     <footer>
-        <p>&copy; 2024 DevDocsHub. All Rights Reserved.</p>
+        <p>&copy; 2024 DevDocsHub. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
+
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+
+    <script>
+        // Toggle dark mode function
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+    <script>
+        const words = ["Web Development!", "Data Science!", "Artificial Intelligence!", "Open Source!", "Machine Learning!"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        const changingText = document.getElementById("changing-text");
+    
+        function type() {
+            if (charIndex < words[wordIndex].length) {
+                changingText.textContent += words[wordIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 150); // Speed of typing each character
+            } else {
+                setTimeout(erase, 1000); // Pause before erasing
+            }
+        }
+    
+        function erase() {
+            if (charIndex > 0) {
+                changingText.textContent = words[wordIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 100); // Speed of erasing each character
+            } else {
+                wordIndex = (wordIndex + 1) % words.length; // Move to the next word
+                setTimeout(type, 300); // Start typing the next word
+            }
+        }
+    
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(type, 1000); // Initial delay before starting the effect
+        });
+    </script>
 
     {% block extra_js %}{% endblock %}
 </body>
