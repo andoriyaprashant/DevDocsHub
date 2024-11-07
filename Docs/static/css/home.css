@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +11,38 @@ body {
     color: #333;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Navbar Styles */
 nav {
     background-color: #fffacd;
     padding: 5px 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed ;
+    position: fixed;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+ /* Logo Styling */
+.navbar-logo {
+    margin-left: 10px; 
+} 
+
+.navbar-logo img {
+    height: 20px; /* Set explicit height */
+    width: 15px;   /* Keep aspect ratio */
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px; /* Adjust margin if necessary */
+    transition: transform 0.2s ease;
+}
+
+.navbar-logo img:hover {
+    transform: scale(1.05); /* Subtle hover effect */
+}
+
+/* Navbar Links Styling */
 nav ul {
     list-style-type: none;
     display: flex;
@@ -35,6 +61,8 @@ nav ul li a:hover {
     background-color: #ffff00;
     border-radius: 5px;
 }
+
+/* Header Styles */
 header {
     background-color: #007bff;
     color: #fff;
@@ -50,8 +78,10 @@ header h1 {
 header p {
     font-size: 1.2rem;
     color: #191970;
-    font-weight:400;
+    font-weight: 400;
 }
+
+/* Container and Card Styles */
 .container {
     max-width: 1200px;
     margin: 50px auto;
@@ -71,7 +101,7 @@ header p {
 }
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0.2, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .highlight {
     background-color: #0000ff;
@@ -90,6 +120,8 @@ header p {
     align-self: flex-start;
     margin-top: 15px;
 }
+
+/* Footer Styles */
 footer {
     background-color: #343a40;
     color: #fff;
@@ -99,16 +131,20 @@ footer {
 }
 footer p {
     font-size: 0.9rem;
-    color:black;
+    color: black;
 }
 footer a {
     color: #fff;
 }
+
+/* Grid Layout */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
+
+/* Search Bar Styles */
 .search-bar {
     margin: 30px 0;
     text-align: center;
@@ -119,7 +155,6 @@ footer a {
     font-size: 1rem;
     border-radius: 5px;
     border: 1px solid #ccc;
-
 }
 
 /* Dark Mode Styles */
@@ -139,7 +174,7 @@ footer a {
 .dark-mode header h1 {
     color: #ddd;
 }
-.dark-mode header p{
+.dark-mode header p {
     color: #ddd;
 }
 .dark-mode .card {
@@ -156,6 +191,26 @@ footer a {
     border-color: #777;
     color: #fff;
 }
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;  
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000; 
+}
+.dark-mode-toggle:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 600px) {
     header h1 {
         font-size: 2rem;
@@ -170,23 +225,11 @@ footer a {
     .search-bar input[type="text"] {
         width: 80%;
     }
-}
-
-.dark-mode-toggle {
-    position: fixed;
-    bottom: 20px; 
-    right: 20px;  
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 1000; 
-}
-
-
-.dark-mode-toggle:hover {
-    background-color: #0056b3;
+    .navbar-logo img {
+        height: 50px; /* Resize logo for smaller screens */
+    }
+    nav ul {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        gap: 10px;
+    }
 }
